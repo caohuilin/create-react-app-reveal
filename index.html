@@ -28,7 +28,7 @@
           <h1 class="title">Pandora 2.0 自定义应用</h1>
           <p class="author">--- Pandora 团队</p>
         </section>
-        <section>
+        <section data-transition="convex">
           <h2 class="title2">应用类型</h2>
           <ul class="type-list">
             <li>基础类型（normal）</li>
@@ -66,7 +66,7 @@
           </p>
           <img src="resource/component.png" alt="component" />
         </section>
-        <section>
+        <section data-transition="convex">
           <h1 class="title">create-pandora-app</h1>
           <p class="page">
             <a
@@ -75,12 +75,12 @@
               >https://www.npmjs.com/package/create-pandora-app</a
             >
           </p>
-			    <pre><code class="code">$ npx create-pandora-app appName</code></pre>
+          <pre><code class="code">$ npx create-pandora-app appName</code></pre>
         </section>
         <section>
           <section>
             <h2 class="title2">基础类型（normal）</h2>
-            <video width="600" height="440" controls>
+            <video data-autoplay>
               <source src="resource/normal.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -88,45 +88,83 @@
           <section>
             <h2 class="title2">基础类型（normal）</h2>
             <img src="resource/normal_menu.png" alt="normal" />
-		  </section>
-		  <section>
+          </section>
+          <section>
             <h2 class="title2">基础类型（normal）</h2>
-            <p class="page">
-				修改 view 相关的 xml 打包即可
-			  </p>
+            <p class="page-center">
+              修改 view 相关的 xml 打包即可
+            </p>
+            <img class="package" src="resource/Package.png" alt="package" />
+          </section>
+          <section>
+            <h2 class="title2">交互式创建基础应用</h2>
+            <img src="resource/normal-create.png" alt="create" />
+          </section>
+          <section>
+            <h2 class="title2">交互式创建基础应用 -- 视图</h2>
+            <img src="resource/normal-create-view.png" alt="create" />
+          </section>
+          <section>
+            <h2 class="title2">交互式创建基础应用 -- 导航</h2>
+            <img src="resource/normal-nav.png" alt="create" />
+          </section>
+          <section>
+            <h2 class="title2">交互式创建基础应用 -- 来源类型</h2>
+            <img src="resource/normal-sourcetype.png" alt="create" />
+          </section>
+          <section>
+            <h2 class="title2">交互式创建基础应用 -- 提取规则</h2>
+            <img src="resource/normal-extraction.png" alt="create" />
           </section>
         </section>
-		</section>
         <section>
           <section>
             <h2 class="title2">可视化类型（visualization）</h2>
-            <video width="600" height="440" controls>
+            <video data-autoplay>
               <source src="resource/visualization.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </section>
           <section>
             <h2 class="title2">可视化类型（visualization）</h2>
-            <img src="resource/visualization_menu.png" alt="visualization" />
-		  </section>
-		  <section>
-			<h2 class="title2">可视化类型（visualization）</h2>
-			<pre><code class="code">$ cd visualization-app/develop</code></pre>
-			<pre><code class="code">$ yarn setup && yarn start</code></pre>
-		  </section>
-		  <section>
-			<h2 class="title2">可视化类型（visualization）</h2>
-			<img src="resource/visualization_demo.png" alt="visualization" />
-		  </section>
-		  <section>
-			<h2 class="title2">可视化类型（visualization）</h2>
-			<pre><code class="code">$ yarn package</code></pre>
-		  </section>
+            <img
+              class="visialization-menu"
+              src="resource/visualization_menu.png"
+              alt="visualization"
+            />
+          </section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <pre><code class="code">$ cd visualization-app/develop</code></pre>
+            <pre><code class="code">$ yarn setup && yarn start</code></pre>
+          </section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <a
+              href="https://www.npmjs.com/package/@qn-pandora/visualization-sdk"
+              target="_blank"
+              >visualization-sdk</a
+            >
+            <img
+              class="visualization-code"
+              src="resource/visualization-code.png"
+              alt="visualization"
+            />
+          </section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <img src="resource/visualization_demo.png" alt="visualization" />
+          </section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <pre><code class="code">$ yarn package</code></pre>
+            <img class="package" src="resource/Package.png" alt="package" />
+          </section>
         </section>
         <section>
           <section>
             <h2 class="title2">组件类型（component）</h2>
-            <video width="600" height="440" controls>
+            <video data-autoplay>
               <source src="resource/component.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -134,33 +172,69 @@
           <section>
             <h2 class="title2">组件类型（component）</h2>
             <img src="resource/component_menu.png" alt="component" />
-		  </section>
-		  <section>
-			<h2 class="title2">组件类型（component）</h2>
-			<pre><code class="code">$ cd component-app/develop</code></pre>
-			<pre><code class="code">$ yarn setup && yarn start</code></pre>
-		  </section>
-		  <section>
-			<h2 class="title2">组件类型（component）</h2>
-			<img src="resource/component_demo.png" alt="component" />
-		  </section>
-		  <section>
-			<h2 class="title2">组件类型（component）</h2>
-			<pre><code class="code">$ yarn package</code></pre>
-		  </section>
+          </section>
+          <section>
+            <h2 class="title2">组件类型（component）</h2>
+            <pre><code class="code">$ cd component-app/develop</code></pre>
+            <pre><code class="code">$ yarn setup && yarn start</code></pre>
+          </section>
+          <section>
+            <h2 class="title2">组件类型（component）</h2>
+            <a
+              href="https://www.npmjs.com/package/@qn-pandora/app-sdk"
+              target="_blank"
+              >app-sdk</a
+            >
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+import { SearchManager } from '@qn-pandora/app-sdk'
+
+const searchCondition = {
+  queryString: 'repo="testjwzfr"',
+  time: {
+    start: 0,
+    end: 1589770122581,
+  },
+}
+const option = {
+  task: {
+    event: true,
+    summary: true,
+    timeline: true,
+    result: true,
+  },
+}
+const searchManager = new SearchManager({
+  option: option,
+})
+searchManager.on('done', (data) => {
+  console.log('data', data)
+})
+searchManager.search(searchCondition)
+						</code></pre>
+          </section>
+          <section>
+            <h2 class="title2">组件类型（component）</h2>
+            <img src="resource/component_demo.png" alt="component" />
+          </section>
+          <section>
+            <h2 class="title2">组件类型（component）</h2>
+            <pre><code class="code">$ yarn package</code></pre>
+            <img class="package" src="resource/Package.png" alt="package" />
+          </section>
         </section>
-		</section>
-		<section>
-			<h2 class="title2">上传应用</h2>
-			<img src="resource/upload.png" alt="upload" />
-		</section>
-		<section>
-			<h2 class="title2">查看应用</h2>
-			<img src="resource/appStore.png" alt="upload" />
-		</section>
-		<section>
-			<h1 class="title">谢谢大家!</h2>
-		</section>
+        <section data-transition="convex">
+          <h2 class="title2">上传应用</h2>
+          <img src="resource/upload.png" alt="upload" />
+        </section>
+        <section data-transition="convex">
+          <h2 class="title2">查看应用</h2>
+          <img src="resource/appStore.png" alt="upload" />
+        </section>
+        <section>
+          <h1 class="title">谢谢大家!</h1>
+        </section>
       </div>
     </div>
 

@@ -18,14 +18,32 @@
 .reveal .page {
   font-size: 0.75em;
 }
-.reveal .code {
-  margin-top: 1.75em;
-  margin-left: 1em;
+.reveal .page-center {
+  font-size: 0.75em;
+  margin-top: 20%;
+}
+.reveal pre {
+  margin-top: 3em;
+  margin-left: 3em;
 }
 .reveal .code span {
   color: rgba(255, 255, 255, 0.8);
 }
-
 section {
   height: 100%;
+}
+.reveal .package {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.reveal .visualization-code {
+  display: block;
+  height: 13em;
+  margin: 0 auto;
+}
+.reveal .visialization-menu {
+  display: block;
+  height: 15em;
+  margin: 0 auto;
 }
