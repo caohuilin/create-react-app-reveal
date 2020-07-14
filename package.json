@@ -1,8 +1,7 @@
 {
   "name": "reveal.js",
   "version": "4.0.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "https://revealjs.com",
+  "description": "pandora2.0 自定义应用",
   "subdomain": "revealjs",
   "main": "dist/reveal.js",
   "module": "dist/reveal.esm.js",
@@ -12,14 +11,9 @@
     "start": "gulp serve",
     "build": "gulp"
   },
-  "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "https://hakim.se"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git@github.com:caohuilin/create-react-app-reveal.git"
   },
   "engines": {
     "node": ">=10.0.0"

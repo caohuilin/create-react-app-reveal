@@ -1,40 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="css/style.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Pandora 2.0 自定义应用</h1>
+          <p class="author">--- Pandora 团队</p>
+        </section>
+        <section>
+          <h2 class="title2">应用类型</h2>
+          <ul class="type-list">
+            <li>基础类型（normal）</li>
+            <li>可视化类型（visualization）</li>
+            <li>自定义组件类型（component）</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="title2">基础类型（normal）</h2>
+          <p class="page">
+            应用由XML文件组建而成，可展示仪表盘，搜索及可视化页面
+          </p>
+          <img src="resource/normal.png" alt="normal" />
+        </section>
+        <section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <p class="page">
+              应用用于补充平台不支持的可视化图表
+            </p>
+            <img src="resource/visualization1.png" alt="visualization" />
+          </section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <p class="page">
+              应用用于补充平台不支持的可视化图表
+            </p>
+            <img src="resource/visualization2.png" alt="visualization" />
+          </section>
+        </section>
+        <section>
+          <h2 class="title2">自定义组件类型（component）</h2>
+          <p class="page">
+            可用于最大化的自定义页面，目前支持React组件
+          </p>
+          <img src="resource/component.png" alt="component" />
+        </section>
+        <section>
+          <h1 class="title">create-pandora-app</h1>
+          <p class="page">
+            <a
+              target="_blank"
+              href="https://www.npmjs.com/package/create-pandora-app"
+              >https://www.npmjs.com/package/create-pandora-app</a
+            >
+          </p>
+			    <pre><code class="code">$ npx create-pandora-app appName</code></pre>
+        </section>
+        <section>
+          <section>
+            <h2 class="title2">基础类型（normal）</h2>
+            <video width="600" height="440" controls>
+              <source src="resource/normal.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </section>
+          <section>
+            <h2 class="title2">基础类型（normal）</h2>
+            <img src="resource/normal_menu.png" alt="normal" />
+		  </section>
+		  <section>
+            <h2 class="title2">基础类型（normal）</h2>
+            <p class="page">
+				修改 view 相关的 xml 打包即可
+			  </p>
+          </section>
+        </section>
+		</section>
+        <section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <video width="600" height="440" controls>
+              <source src="resource/visualization.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </section>
+          <section>
+            <h2 class="title2">可视化类型（visualization）</h2>
+            <img src="resource/visualization_menu.png" alt="visualization" />
+		  </section>
+		  <section>
+			<h2 class="title2">可视化类型（visualization）</h2>
+			<pre><code class="code">$ cd visualization-app/develop</code></pre>
+			<pre><code class="code">$ yarn setup && yarn start</code></pre>
+		  </section>
+		  <section>
+			<h2 class="title2">可视化类型（visualization）</h2>
+			<img src="resource/visualization_demo.png" alt="visualization" />
+		  </section>
+		  <section>
+			<h2 class="title2">可视化类型（visualization）</h2>
+			<pre><code class="code">$ yarn package</code></pre>
+		  </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="title2">组件类型（component）</h2>
+            <video width="600" height="440" controls>
+              <source src="resource/component.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </section>
+          <section>
+            <h2 class="title2">组件类型（component）</h2>
+            <img src="resource/component_menu.png" alt="component" />
+		  </section>
+		  <section>
+			<h2 class="title2">组件类型（component）</h2>
+			<pre><code class="code">$ cd component-app/develop</code></pre>
+			<pre><code class="code">$ yarn setup && yarn start</code></pre>
+		  </section>
+		  <section>
+			<h2 class="title2">组件类型（component）</h2>
+			<img src="resource/component_demo.png" alt="component" />
+		  </section>
+		  <section>
+			<h2 class="title2">组件类型（component）</h2>
+			<pre><code class="code">$ yarn package</code></pre>
+		  </section>
+        </section>
+		</section>
+		<section>
+			<h2 class="title2">上传应用</h2>
+			<img src="resource/upload.png" alt="upload" />
+		</section>
+		<section>
+			<h2 class="title2">查看应用</h2>
+			<img src="resource/appStore.png" alt="upload" />
+		</section>
+		<section>
+			<h1 class="title">谢谢大家!</h2>
+		</section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      })
+    </script>
+  </body>
 </html>

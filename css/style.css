@@ -1,0 +1,31 @@
+.reveal .title {
+  font-size: 1.6em;
+  text-transform: none;
+  margin-top: 25%;
+}
+.reveal .author {
+  text-align: right;
+  margin-top: 1.3em;
+  margin-right: 1em;
+}
+.reveal .title2 {
+  font-size: 1.2em;
+  text-transform: none;
+}
+.reveal .type-list {
+  margin-top: 1.3em;
+}
+.reveal .page {
+  font-size: 0.75em;
+}
+.reveal .code {
+  margin-top: 1.75em;
+  margin-left: 1em;
+}
+.reveal .code span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+section {
+  height: 100%;
+}
