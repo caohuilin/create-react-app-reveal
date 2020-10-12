@@ -47,3 +47,7 @@ section {
   height: 15em;
   margin: 0 auto;
 }
+
+video {
+  width: 500px;
+}

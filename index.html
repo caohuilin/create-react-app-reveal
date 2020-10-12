@@ -31,13 +31,13 @@
         <section data-transition="convex">
           <h2 class="title2">应用类型</h2>
           <ul class="type-list">
-            <li>基础类型（normal）</li>
+            <li>基础类型（simple）</li>
             <li>可视化类型（visualization）</li>
-            <li>自定义组件类型（component）</li>
+            <li>自定义组件类型（view-component）</li>
           </ul>
         </section>
         <section>
-          <h2 class="title2">基础类型（normal）</h2>
+          <h2 class="title2">基础类型（simple）</h2>
           <p class="page">
             应用由XML文件组建而成，可展示仪表盘，搜索及可视化页面
           </p>
@@ -60,9 +60,9 @@
           </section>
         </section>
         <section>
-          <h2 class="title2">自定义组件类型（component）</h2>
+          <h2 class="title2">自定义组件类型（view-component）</h2>
           <p class="page">
-            可用于最大化的自定义页面，目前支持React组件
+            可用于最大化的自定义业务逻辑
           </p>
           <img src="resource/component.png" alt="component" />
         </section>
@@ -79,18 +79,18 @@
         </section>
         <section>
           <section>
-            <h2 class="title2">基础类型（normal）</h2>
+            <h2 class="title2">基础类型（simple）</h2>
             <video data-autoplay>
-              <source src="resource/normal.mp4" type="video/mp4" />
+              <source src="resource/simple-app.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </section>
           <section>
-            <h2 class="title2">基础类型（normal）</h2>
+            <h2 class="title2">基础类型（simple）</h2>
             <img src="resource/normal_menu.png" alt="normal" />
           </section>
           <section>
-            <h2 class="title2">基础类型（normal）</h2>
+            <h2 class="title2">基础类型（simple）</h2>
             <p class="page-center">
               修改 view 相关的 xml 打包即可
             </p>
@@ -121,7 +121,7 @@
           <section>
             <h2 class="title2">可视化类型（visualization）</h2>
             <video data-autoplay>
-              <source src="resource/visualization.mp4" type="video/mp4" />
+              <source src="resource/visualization-app.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </section>
@@ -163,23 +163,23 @@
         </section>
         <section>
           <section>
-            <h2 class="title2">组件类型（component）</h2>
+            <h2 class="title2">组件类型（view-component）</h2>
             <video data-autoplay>
-              <source src="resource/component.mp4" type="video/mp4" />
+              <source src="resource/view-component.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </section>
           <section>
-            <h2 class="title2">组件类型（component）</h2>
+            <h2 class="title2">组件类型（view-component）</h2>
             <img src="resource/component_menu.png" alt="component" />
           </section>
           <section>
-            <h2 class="title2">组件类型（component）</h2>
+            <h2 class="title2">组件类型（view-component）</h2>
             <pre><code class="code">$ cd component-app/develop</code></pre>
             <pre><code class="code">$ yarn setup && yarn start</code></pre>
           </section>
           <section>
-            <h2 class="title2">组件类型（component）</h2>
+            <h2 class="title2">组件类型（view-component）</h2>
             <a
               href="https://www.npmjs.com/package/@qn-pandora/app-sdk"
               target="_blank"
@@ -188,38 +188,42 @@
             <pre
               data-id="code-animation"
             ><code class="hljs" data-trim data-line-numbers>
-import { SearchManager } from '@qn-pandora/app-sdk'
+import { SearchManager, EEventName } from '@qn-pandora/app-sdk'
 
 const searchCondition = {
-  queryString: 'repo="testjwzfr"',
+  queryString: `
+    repo="app_doc" 
+    | fields _time, request.url, request.method, response.statusName, action.name 
+    | limit 10
+  `, // 搜索条件
   time: {
-    start: 0,
-    end: 1589770122581,
-  },
+    start: 0, // 起始时间
+    end: 1597588690623 // 结束时间
+  }
 }
 const option = {
   task: {
     event: true,
-    summary: true,
-    timeline: true,
-    result: true,
-  },
+    summary: false,
+    timeline: false,
+    result: true
+  }
 }
 const searchManager = new SearchManager({
-  option: option,
+  option: option
 })
-searchManager.on('done', (data) => {
-  console.log('data', data)
+searchManager.on(EEventName.DONE, ({ result }) => {
+  setDataset(result)
 })
 searchManager.search(searchCondition)
 						</code></pre>
           </section>
           <section>
-            <h2 class="title2">组件类型（component）</h2>
+            <h2 class="title2">组件类型（view-component）</h2>
             <img src="resource/component_demo.png" alt="component" />
           </section>
           <section>
-            <h2 class="title2">组件类型（component）</h2>
+            <h2 class="title2">组件类型（view-component）</h2>
             <pre><code class="code">$ yarn package</code></pre>
             <img class="package" src="resource/Package.png" alt="package" />
           </section>
